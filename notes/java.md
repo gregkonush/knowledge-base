@@ -1,8 +1,8 @@
 ---
 id: y042ioo93gryii93nud3xpr
 title: Java
-desc: ''
-updated: 1662247112569
+desc: ""
+updated: 1662247918744
 created: 1662246813842
 ---
 
@@ -24,7 +24,6 @@ Java microservice framework developed by creator of Netty
 
 Polyglot JVM. Can execute other language with one compiler.
 Nashorn JavaScript engine is not included in OpenJDK. Oracle and GraalVM have `ScriptEngineManager` class
-
 
 Practical use cases:
 
