@@ -1,12 +1,12 @@
 ---
-id: uic6mk01wqhr5vtwcqd3tj8
-title: Graalvm
+id: d8t0fehrrlw5jnjugyk5l2a
+title: Script Engine
 desc: ''
-updated: 1662242158872
-created: 1662241748417
+updated: 1662247003066
+created: 1662246966384
 ---
 
-## Code snippets for JavaScript execution with GraalVM
+## Code snippet for JavaScript execution with GraalVM
 
 
 ```kotlin
