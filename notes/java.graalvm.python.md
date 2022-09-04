@@ -2,7 +2,7 @@
 id: dbna5ho9r85lmb0etellr01
 title: Python
 desc: ""
-updated: 1662284269999
+updated: 1662329603250
 created: 1662281688338
 ---
 
@@ -41,3 +41,32 @@ It needs additional dependency: `llvm-toolchain`
 
 So using IntelliJ didn't work out with WSL2
 I can try to use vscode to compile and run simple code directly with kotlin compiler
+
+```bash
+# install
+sdk install kotlin
+# compile a file
+kotlinc main.kt
+# execute
+kotlin MainKt.class
+
+```
+
+So it works with simple gradle setup, here is the snippet
+
+```kotlin
+import org.graalvm.polyglot.Context
+
+fun main() {
+  Context.create().use { context ->
+    val function = context.eval("python", """
+lambda total_units, price_per_unit: \
+  total_units * price_per_unit if total_units < 1000 else \
+    total_units * price_per_unit if total_units < 2000 else \
+      50000
+""");
+    print(function.execute(1002, 1).asInt())
+  }
+}
+```
+
