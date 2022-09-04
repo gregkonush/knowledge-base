@@ -2,15 +2,11 @@
 id: bhtykxq723p3wv97lf8y1kb
 title: Knowledge Base
 desc: ""
-updated: 1662248214464
+updated: 1662249367251
 created: 1662014858035
 ---
 
 ## Development notes
-
-### MongoDB
-
-NoSQL database
 
 ### Dendron
 
