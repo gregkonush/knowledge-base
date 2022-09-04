@@ -2,7 +2,7 @@
 id: dbna5ho9r85lmb0etellr01
 title: Python
 desc: ""
-updated: 1662281871638
+updated: 1662284269999
 created: 1662281688338
 ---
 
@@ -38,3 +38,6 @@ wasm                     22.2.0              GraalWasm                     Exper
 ```
 
 It needs additional dependency: `llvm-toolchain`
+
+So using IntelliJ didn't work out with WSL2
+I can try to use vscode to compile and run simple code directly with kotlin compiler
