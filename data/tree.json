@@ -1,0 +1,174 @@
+{
+  "roots": [
+    {
+      "key": "bhtykxq723p3wv97lf8y1kb",
+      "title": "Knowledge Base",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "knowledge-base",
+      "navExclude": false,
+      "children": [
+        {
+          "key": "vv1m0lmwwdbkhrordvw9g1j",
+          "title": "Database",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "knowledge-base",
+          "navExclude": false,
+          "children": []
+        },
+        {
+          "key": "b2xj7n2eph82u13zkp2nl3m",
+          "title": "GraphQL",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "knowledge-base",
+          "navExclude": false,
+          "children": []
+        },
+        {
+          "key": "y042ioo93gryii93nud3xpr",
+          "title": "Java",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "knowledge-base",
+          "navExclude": false,
+          "children": [
+            {
+              "key": "t2ykuaommf4mh514w4wrg6p",
+              "title": "Graalvm",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "knowledge-base",
+              "navExclude": false,
+              "children": [
+                {
+                  "key": "dbna5ho9r85lmb0etellr01",
+                  "title": "Python",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "knowledge-base",
+                  "navExclude": false,
+                  "children": []
+                },
+                {
+                  "key": "d8t0fehrrlw5jnjugyk5l2a",
+                  "title": "Script Engine",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "knowledge-base",
+                  "navExclude": false,
+                  "children": []
+                },
+                {
+                  "key": "u1oj92u5avcurpfvn549be2",
+                  "title": "VisualVM",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "knowledge-base",
+                  "navExclude": false,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "key": "kymv6a0rahlvc9764jkpzyf",
+              "title": "Quarkus",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "knowledge-base",
+              "navExclude": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "kl31j5c0aifaiv9ojtv0kzb",
+          "title": "Kotlin",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "knowledge-base",
+          "navExclude": false,
+          "children": [
+            {
+              "key": "8isfh1d7i0piw7sakaexfar",
+              "title": "Build",
+              "icon": "plusOutlined",
+              "hasTitleNumberOutlined": false,
+              "vaultName": "knowledge-base",
+              "navExclude": false,
+              "children": [
+                {
+                  "key": "8tcalp6q5nfrdv9hbogt6i9",
+                  "title": "Gradle",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "knowledge-base",
+                  "navExclude": false,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "key": "x9winx18ig1serwaz3bdbku",
+              "title": "Libraries",
+              "icon": "plusOutlined",
+              "hasTitleNumberOutlined": false,
+              "vaultName": "knowledge-base",
+              "navExclude": false,
+              "children": [
+                {
+                  "key": "cbe7n05lubrsf7u94wdabyi",
+                  "title": "ktlint",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "knowledge-base",
+                  "navExclude": false,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "wxzcykopicsap9m72b63vqp",
+          "title": "Tools",
+          "icon": "plusOutlined",
+          "hasTitleNumberOutlined": false,
+          "vaultName": "knowledge-base",
+          "navExclude": false,
+          "children": [
+            {
+              "key": "hm7x7xulnear1v5y8qhe5gr",
+              "title": "IntelliJ",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "knowledge-base",
+              "navExclude": false,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "child2parent": {
+    "403": null,
+    "bhtykxq723p3wv97lf8y1kb": null,
+    "wxzcykopicsap9m72b63vqp": "bhtykxq723p3wv97lf8y1kb",
+    "hm7x7xulnear1v5y8qhe5gr": "wxzcykopicsap9m72b63vqp",
+    "kl31j5c0aifaiv9ojtv0kzb": "bhtykxq723p3wv97lf8y1kb",
+    "x9winx18ig1serwaz3bdbku": "kl31j5c0aifaiv9ojtv0kzb",
+    "cbe7n05lubrsf7u94wdabyi": "x9winx18ig1serwaz3bdbku",
+    "8isfh1d7i0piw7sakaexfar": "kl31j5c0aifaiv9ojtv0kzb",
+    "8tcalp6q5nfrdv9hbogt6i9": "8isfh1d7i0piw7sakaexfar",
+    "y042ioo93gryii93nud3xpr": "bhtykxq723p3wv97lf8y1kb",
+    "kymv6a0rahlvc9764jkpzyf": "y042ioo93gryii93nud3xpr",
+    "t2ykuaommf4mh514w4wrg6p": "y042ioo93gryii93nud3xpr",
+    "u1oj92u5avcurpfvn549be2": "t2ykuaommf4mh514w4wrg6p",
+    "d8t0fehrrlw5jnjugyk5l2a": "t2ykuaommf4mh514w4wrg6p",
+    "dbna5ho9r85lmb0etellr01": "t2ykuaommf4mh514w4wrg6p",
+    "b2xj7n2eph82u13zkp2nl3m": "bhtykxq723p3wv97lf8y1kb",
+    "vv1m0lmwwdbkhrordvw9g1j": "bhtykxq723p3wv97lf8y1kb"
+  }
+}

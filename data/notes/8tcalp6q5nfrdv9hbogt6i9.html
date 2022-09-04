@@ -1,0 +1,25 @@
+<h1 id="gradle"><a aria-hidden="true" class="anchor-heading icon-link" href="#gradle"></a>Gradle</h1>
+<p>Simple Kotlin application in Gradle</p>
+<p>In build.gradle.kts</p>
+<pre class="language-kotlin"><code class="language-kotlin"><span class="token comment">/*
+ * Setup application and kotlin plugins
+ */</span>
+
+plugins <span class="token punctuation">{</span>
+  application
+  <span class="token function">kotlin</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"jvm"</span></span><span class="token punctuation">)</span> version <span class="token string-literal singleline"><span class="token string">"1.7.10"</span></span>
+<span class="token punctuation">}</span>
+
+application <span class="token punctuation">{</span>
+  mainClass<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"MainKt"</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+repositories <span class="token punctuation">{</span>
+  <span class="token function">mavenCentral</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+dependencies <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+
+</code></pre>

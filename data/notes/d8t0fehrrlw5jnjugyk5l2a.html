@@ -1,0 +1,25 @@
+<h1 id="script-engine"><a aria-hidden="true" class="anchor-heading icon-link" href="#script-engine"></a>Script Engine</h1>
+<h2 id="code-snippet-for-javascript-execution-with-graalvm"><a aria-hidden="true" class="anchor-heading icon-link" href="#code-snippet-for-javascript-execution-with-graalvm"></a>Code snippet for JavaScript execution with GraalVM</h2>
+<pre class="language-kotlin"><code class="language-kotlin"><span class="token keyword">import</span> org<span class="token punctuation">.</span>graalvm<span class="token punctuation">.</span>polyglot<span class="token punctuation">.</span>Context
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>graalvm<span class="token punctuation">.</span>polyglot<span class="token punctuation">.</span>Value
+
+<span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Context<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">use</span> <span class="token punctuation">{</span> context <span class="token operator">-></span>
+    <span class="token keyword">val</span> function<span class="token operator">:</span> Value <span class="token operator">=</span> context<span class="token punctuation">.</span><span class="token function">eval</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"js"</span></span><span class="token punctuation">,</span> <span class="token string-literal multiline"><span class="token string">"""
+      (
+        function square(param) {
+          return param * param;
+        }
+      )
+    """</span></span><span class="token punctuation">.</span><span class="token function">trimIndent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token function">assert</span><span class="token punctuation">(</span>function<span class="token punctuation">.</span><span class="token function">canExecute</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">val</span> x<span class="token operator">:</span> Int <span class="token operator">=</span> function<span class="token punctuation">.</span><span class="token function">execute</span><span class="token punctuation">(</span><span class="token number">41</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">asInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/knowledge-base/notes/y042ioo93gryii93nud3xpr">Java</a></li>
+</ul>

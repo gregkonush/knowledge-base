@@ -1,0 +1,39 @@
+<h1 id="quarkus"><a aria-hidden="true" class="anchor-heading icon-link" href="#quarkus"></a>Quarkus</h1>
+<ul>
+<li>
+<p>During build time Quarkus removes classes that won't be need at a runtime.</p>
+</li>
+<li>
+<p>Quarkus tries to avoid reflection to reduce startup time.</p>
+</li>
+<li>
+<p>Native executables have first-class support. Quarkus uses agressive dead-code elimination techniques to only embed the part of the JVM and classes that
+are absolutely required by an application.</p>
+</li>
+</ul>
+<h2 id="reactive-architechture"><a aria-hidden="true" class="anchor-heading icon-link" href="#reactive-architechture"></a>Reactive architechture</h2>
+<p><a href="https://www.reactivemanifesto.org/">Reactive Manifesto</a></p>
+<p>Reactive Systems as distributed systems having four characteristics:</p>
+<ul>
+<li>Responsive - they must respond in a timely fashion</li>
+<li>Elastic - they adapt themselves to the fluctiating load</li>
+<li>Resilient - they handle failures gracefully</li>
+<li>Asynchronous message passing - the component of a reactive system interact using messages</li>
+</ul>
+<h3 id="how-does-quarkus-enables-reactive"><a aria-hidden="true" class="anchor-heading icon-link" href="#how-does-quarkus-enables-reactive"></a>How does Quarkus enables Reactive</h3>
+<p>Under the hood, Quarkus has a reactive design. It is using Eclipse Vert.x and Netty, handles the non-blocking I/O interactions.</p>
+<h3 id="there-are-two-ways-how-to-write-reactive-code-in-quarkus"><a aria-hidden="true" class="anchor-heading icon-link" href="#there-are-two-ways-how-to-write-reactive-code-in-quarkus"></a>There are two ways how to write reactive code in Quarkus</h3>
+<ul>
+<li>
+<p>Reactive Programming with <a href="https://smallrye.io/smallrye-mutiny">Mutiny</a></p>
+<ul>
+<li>An intuitive, event-driven reactive programming library.</li>
+</ul>
+</li>
+<li>
+<p>Coroutines with Kotlin</p>
+<ul>
+<li>Co-routines are a way to write asynchronous code sequentially.</li>
+</ul>
+</li>
+</ul>

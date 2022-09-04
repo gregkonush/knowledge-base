@@ -1,0 +1,50 @@
+<h1 id="python"><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a>Python</h1>
+<p>Arm chipped MacOS doesn't have a build for python intepreter in GraalVM</p>
+<p>When I tried to list available packages</p>
+<pre class="language-bash"><code class="language-bash">gu list
+</code></pre>
+<p>This didn't give any relevant results</p>
+<p>Python is available in Linux</p>
+<pre class="language-bash"><code class="language-bash">gu available
+Downloading: Component catalog from www.graalvm.org
+ComponentId              Version             Component name                Stability                     Origin
+---------------------------------------------------------------------------------------------------------------------------------
+espresso                 <span class="token number">22.2</span>.0              Java on Truffle               Supported                     github.com
+espresso-llvm            <span class="token number">22.2</span>.0              Java on Truffle LLVM Java librSupported                     github.com
+js                       <span class="token number">22.2</span>.0              Graal.js                      Supported                     github.com
+llvm                     <span class="token number">22.2</span>.0              LLVM Runtime Core             Experimental                  github.com
+llvm-toolchain           <span class="token number">22.2</span>.0              LLVM.org toolchain            Supported                     github.com
+native-image             <span class="token number">22.2</span>.0              Native Image                  Early adopter                 github.com
+nodejs                   <span class="token number">22.2</span>.0              Graal.nodejs                  Supported                     github.com
+python                   <span class="token number">22.2</span>.0              Graal.Python                  Experimental                  github.com
+R                        <span class="token number">22.2</span>.0              FastR                         Experimental                  github.com
+ruby                     <span class="token number">22.2</span>.0              TruffleRuby                   Experimental                  github.com
+visualvm                 <span class="token number">22.2</span>.0              VisualVM                      Experimental                  github.com
+wasm                     <span class="token number">22.2</span>.0              GraalWasm                     Experimental                  github.com
+</code></pre>
+<p>It needs additional dependency: <code>llvm-toolchain</code></p>
+<p>So using IntelliJ didn't work out with WSL2
+I can try to use vscode to compile and run simple code directly with kotlin compiler</p>
+<pre class="language-bash"><code class="language-bash"><span class="token comment"># install</span>
+sdk <span class="token function">install</span> kotlin
+<span class="token comment"># compile a file</span>
+kotlinc main.kt
+<span class="token comment"># execute</span>
+kotlin MainKt.class
+
+</code></pre>
+<p>So it works with simple gradle setup, here is the snippet</p>
+<pre class="language-kotlin"><code class="language-kotlin"><span class="token keyword">import</span> org<span class="token punctuation">.</span>graalvm<span class="token punctuation">.</span>polyglot<span class="token punctuation">.</span>Context
+
+<span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Context<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">use</span> <span class="token punctuation">{</span> context <span class="token operator">-></span>
+    <span class="token keyword">val</span> function <span class="token operator">=</span> context<span class="token punctuation">.</span><span class="token function">eval</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"python"</span></span><span class="token punctuation">,</span> <span class="token string-literal multiline"><span class="token string">"""
+lambda total_units, price_per_unit: \
+  total_units * price_per_unit if total_units &#x3C; 1000 else \
+    total_units * price_per_unit if total_units &#x3C; 2000 else \
+      50000
+"""</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">print</span><span class="token punctuation">(</span>function<span class="token punctuation">.</span><span class="token function">execute</span><span class="token punctuation">(</span><span class="token number">1002</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">asInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
