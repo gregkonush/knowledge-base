@@ -2,7 +2,7 @@
 id: kymv6a0rahlvc9764jkpzyf
 title: Quarkus
 desc: ""
-updated: 1662254397537
+updated: 1662254822463
 created: 1662253237838
 ---
 
@@ -27,3 +27,13 @@ Reactive Systems as distributed systems having four characteristics:
 ### How does Quarkus enables Reactive
 
 Under the hood, Quarkus has a reactive design. It is using Eclipse Vert.x and Netty, handles the non-blocking I/O interactions.
+
+### There are two ways how to write reactive code in Quarkus
+
+- Reactive Programming with [Mutiny](https://smallrye.io/smallrye-mutiny)
+
+  - An intuitive, event-driven reactive programming library.
+
+- Coroutines with Kotlin
+
+  - Co-routines are a way to write asynchronous code sequentially.
